@@ -38,4 +38,15 @@ h1 {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+@media (min-width: 768px) { 
+    .dosColumnas{
+        display: flex; /*Por defecto con flex los elementos hijos se muestras de izquierda a derecha*/
+        justify-content: space-between; /*Justify nos permite alinear de izquierda a derecha*/
+        gap: 2rem;
+    }
+    .entrada-blog{
+        /*flex-basis: calc(50% - 1rem); Va a medir el 50% pero como va a tener una separación se le resta 1rem*/
+        flex: 0 0 calc(50% - 1rem);/*Con esto se hace lo mismo de separar pero este toma tres valores. Primero el factor de crecimiento,
+        el segundo es el factor de hacerlo más pequeño y tercero el tamaño base*/
+    }
+}
