@@ -38,4 +38,11 @@ h1 {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+@media (min-width: 768px) { 
+    .dosColumnas {
+        display: grid; /*Activamos grid y como esta clase la tiene el padre de los articles entonces se les aplica a ellos también*/
+        /*grid-template-columns: 50% 50%; Como son dos columnas le digo el tamaño que debe tener cada una, teniendo en cuenta que la suma debe ser 100%*/
+        grid-template-columns: repeat(2, 1fr); /*Otra manera de obtener lo mismo de arriba*/
+        column-gap: 2rem; /*En grid se usa para separar los elementos column-gap*/
+    }
+}
