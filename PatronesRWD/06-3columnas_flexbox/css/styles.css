@@ -47,4 +47,18 @@ p {
     text-transform: uppercase;
 }
 
-/** CODIGO AQUI **/
+@media (min-width: 768px) { 
+    .contenedorFlex{
+        display: flex;
+        justify-content: space-between;
+    }
+    .contenidoPrincipal{
+        flex-basis: calc(60% - 1rem); /*Va a medir el 60% pero como va a tener una separación se le resta 1rem*/
+    }
+    .sidebar{
+        flex-basis: calc(20% - 1rem);
+    }
+    .sidebar1{
+        order: -1; /*Lo ubica en la posición anterior a la que está el contenido que lee primero el html*/
+    }
+}
