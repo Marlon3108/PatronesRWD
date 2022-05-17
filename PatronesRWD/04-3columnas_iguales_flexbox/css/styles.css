@@ -28,7 +28,7 @@ h1 {
     margin: 0 auto;
 }
 
-.entrada-blog a {
+.entradaBlog a {
     display: inline-block;
     background-color: #2196F3;
     color: white;
@@ -36,6 +36,16 @@ h1 {
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
+    border-radius: 5rem;
 }
 
-/** CODIGO AQUI **/
+@media (min-width: 768px) { 
+    .tresColumnas{
+        display: flex;
+        /*gap: 2rem; Se podría hacer con esto la separación pero esta es una opción algo nueva*/
+        justify-content: space-between;
+    }
+    .entradaBlog{
+        flex: 0 0 calc(33.3% - 1rem);
+    }
+}
